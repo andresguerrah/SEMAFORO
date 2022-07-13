@@ -1,12 +1,43 @@
 
-/* 
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
 
-*/
+.greenon{
+    width: 100px;
+    height: 100px;
+    background-color:greenyellow;
+    border-radius:50%
+}
+.greenoff{
+    width: 100px;
+    height: 100px;
+    background-color:green;
+    border-radius:50%
+}
+
+
+.yellowon{
+    width: 100px;
+    height: 100px;
+    background-color:yellow;
+    border-radius:50%
+}
+.yellowoff{
+    width: 100px;
+    height: 100px;
+    background-color:rgb(153, 153, 21);
+    border-radius:50%
+}
+
+
+.redon{
+    width: 100px;
+    height: 100px;
+    background-color:red;
+    border-radius:50%
+}
+.redoff{
+    width: 100px;
+    height: 100px;
+    background-color:rgb(141, 22, 22);
+    border-radius:50%
+}
