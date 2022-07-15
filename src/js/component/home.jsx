@@ -6,37 +6,22 @@ import rigoImage from "../../img/rigo-baby.jpg";
 //create your first component
 const OnOff = () => {
 
-  //  const [opened, setOpened] = useState(true);
-  
+   const [opened, setOpened] = useState(false);
+   const [opened2, setOpened2] = useState(false);
+   const [opened3, setOpened3] = useState(false);
     
     return (
 	<div className="semaforo">
-			    <div className="red">
-        	<button class="redoff" type="button" onClick={() => setOpened(false)}>
-        	OFF
-        	</button>
-    		
-      		<button class="redon" type="button" onClick={() => setOpened(true)}>
-       		ON
-      		</button>
+		<div className="red">
+        	<button class={ opened ? "redon" : "redoff"} type="button" onClick={() => {setOpened(!opened); opened && (setOpened2(false), setOpened3(false))}}></button>
+    	</div>
+			
+		<div className="yellow">
+        	<button class={ opened2 ? "yellowon" : "yellowoff"} type="button" onClick={() => {setOpened2(!opened2); opened2 && (setOpened(false), setOpened3(false))}}></button>
 	    </div>
-			    <div className="yellow">
-        	<button class="yellowoff" type="button" onClick={() => setOpened(false)}>
-        	OFF
-        	</button>
-    		
-      		<button class="yellowon" type="button" onClick={() => setOpened(true)}>
-       		ON
-      		</button>
-	    </div>
+
 	    <div className="green">
-        	<button class="greenoff" type="button" onClick={() => setOpened(false)}>
-        	OFF
-        	</button>
-    		
-      		<button class="greenon" type="button" onClick={() => setOpened(true)}>
-       		ON
-      		</button>
+        	<button class={ opened3 ? "greenon" : "greenoff"} type="button" onClick={() => {setOpened3(!opened3); opened3 && (setOpened(false), setOpened2(false))}}></button>
 	    </div>
 	</div>
 	);
